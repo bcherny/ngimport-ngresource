@@ -1,0 +1,75 @@
+{
+  "name": "ngimport-ngresource",
+  "version": "1.0.0",
+  "description": "ngResource support for ngimport",
+  "main": "./index.js",
+  "main:esnext": "./index.es2015.js",
+  "typings": "./index.d.ts",
+  "scripts": {
+    "build:es2015": "tsc -d -m es2015 -t es6 && mv ./index.js ./index.es2015.js",
+    "build:es5": "tsc -m commonjs -m commonjs -t es5",
+    "build": "npm run clean; npm run lint && npm run build:es2015 && npm run build:es5",
+    "clean": "rm *.d.ts; rm *.map; rm index.js; rm index.es2015.js rm test.js; exit 0",
+    "lint": "tslint index.ts",
+    "prepublishOnly": "npm test",
+    "pretest": "npm run build",
+    "tdd": "karma start",
+    "test": "karma start --single-run",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bcherny/ngimport-ngresource.git"
+  },
+  "keywords": [
+    "import",
+    "require",
+    "angular",
+    "dependency",
+    "inject",
+    "dependency injection",
+    "di",
+    "ngresource",
+    "resource",
+    "typed",
+    "typesafe",
+    "type safe",
+    "typescript",
+    "es6",
+    "es2015",
+    "interoperable",
+    "interoperate"
+  ],
+  "author": "Boris Cherny <boris@performancejs.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bcherny/ngimport-ngresource/issues"
+  },
+  "homepage": "https://github.com/bcherny/ngimport-ngresource#readme",
+  "devDependencies": {
+    "@types/jasmine": "^2.6.0",
+    "angular": "^1.6.6",
+    "angular-resource": "^1.6.8",
+    "browserify": "^14.5.0",
+    "jasmine": "^2.8.0",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-browserify": "^5.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-source-map-support": "^1.2.0",
+    "ngimport": "^0.8.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "@types/angular": "^1.6.34",
+    "@types/angular-resource": "^1.5.14"
+  },
+  "peerDependencies": {
+    "angular": ">=1.5.0",
+    "angular-resource": ">=1.5.0"
+  }
+}

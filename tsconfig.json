@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": true,
+    "strictNullChecks": false,
+    "outDir": ".",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "files": [
+    "./index.ts",
+    "./test.ts"
+  ]
+}
